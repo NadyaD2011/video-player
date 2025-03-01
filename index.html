@@ -54,6 +54,31 @@
         flex-grow: 1;
         margin-right: 5px;
       }
+      .left{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .progress{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 170px;
+        margin-left: 10px;
+      }
+      .progress-slider{
+        height: 5px;
+        background-color: #f8104d;
+        border-radius: 50px;
+        margin-right: -3px;
+      }
+      .slider{
+        width: 9px;
+        height: 9px;
+        border-radius: 100px;
+        background-color: #f8104d;
+        border: solid 3px white;
+      }
     </style>
   </head>
   <body>
@@ -65,9 +90,16 @@
         <button class="js-volume-button button volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
         <button class="js-mute-button button mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
         <div style="color: white;" class="timer">
-          <span class="js-current-time current-time">00:00:00</span>
-          <div class="aaa"></div>
-          <span class="js-duration duration">00:00:00</span>
+          <div class="left">
+            <span class="js-current-time current-time">00:00:00</span>
+            <div class="js-progress progress">
+              <div class="js-progress-slider progress-slider"></div>
+              <div class="slider"></div>
+            </div>
+          </div>
+          <div class="right">
+            <span class="js-duration duration">00:00:00</span>
+          </div>
         </div>
         <button class="js-fullscreen-button button fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
 
