@@ -48,7 +48,8 @@
         display: flex;
         flex-direction: column;
       }
-      .timer{
+      .vp-timer{
+        color: white;
         font-family: 'Roboto';
         font-weight: 400;
         margin-left: 4px;
@@ -59,25 +60,25 @@
         flex-grow: 1;
         margin-right: 5px;
       }
-      .left{
+      .vp-timer__current-time{
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
       }
-      .progress{
+      .vp-timer__progress{
         display: flex;
         align-items: center;
         justify-content: left;
         width: 170px;
         margin-left: 10px;
       }
-      .progress-slider{
+      .vp-timer__progress-slider{
         height: 5px;
         background-color: #f8104d;
         border-radius: 50px;
         margin-right: -3px;
       }
-      .slider{
+      .vp-timer__slider{
         width: 9px;
         height: 9px;
         border-radius: 100px;
@@ -86,11 +87,8 @@
         opacity: 0;
         transition: opacity 300ms ease-in-out;
       }
-      .slider:hover{
+      .vp-timer__slider:hover{
         opacity: 1;
-      }
-      .timer{
-        color: white;
       }
     </style>
   </head>
@@ -102,15 +100,15 @@
         <button class="js-pause-button button pause-button" hidden><i class="fa fa-pause" aria-hidden="true"></i></button>
         <button class="js-volume-button button volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
         <button class="js-mute-button button mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
-        <div class="timer">
-          <div class="left">
+        <div class="vp-timer">
+          <div class="vp-timer__current-time">
             <span class="js-current-time current-time">00:00:00</span>
-            <div class="js-progress progress">
-              <div class="js-progress-slider progress-slider"></div>
-              <div class="slider"></div>
+            <div class="js-progress vp-timer__progress">
+              <div class="js-progress-slider vp-timer__progress-slider"></div>
+              <div class="vp-timer__slider"></div>
             </div>
           </div>
-          <div class="right">
+          <div class="vp-timer__duration">
             <span class="js-duration duration">00:00:00</span>
           </div>
         </div>
